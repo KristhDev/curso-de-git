@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Git</title>
+</head>
+<body>
+    <h1>Curso de Git</h1>
+    <!-- git rm --cahed rutaDelArchivo => este comando sirve para no darle seguimiento a un archivo -->
+    <h2>Temario del curso</h2>
+    <!-- git commit -a => este comando sirve para ignorar git add . y a la vez agregar el comentario -->
+
+    <ul>
+        <li>Introducción</li>
+        <li>Iniciar Repositorio</li>
+        <li>Seguimiento de archivos</li>
+        <li>Historial de cambios</li>
+        <li>Deshacer cambios y etiquetas</li>
+        <li>Ramas</li>
+        <li>Cliente Servidor</li>
+    </ul>
+
+    <!-- git log -p => este comando sirve para ver los cambios por archivo -->
+    <!-- A este mismo si le agrego -CualquierNúmero me sacara los commits que yo desee 
+        en orden de más nuevo a más viejo -->
+
+    <!-- git log --pretty=oneline => este comando sirve para ver los commits en una sola linea -->
+    <!-- git log --pretty=format:"%H - %an - %ad - %s" => este comando sirve para darle un formato a los commits -->
+    <!-- 
+        %H => hash
+        %an => Usuario que creo el commit
+        %ad => fecha de creacción del commit
+        %s => mensaje del commit
+
+        Para más información ver la documentación de Git
+    -->
+
+    <!-- git commit --amend -m "Commit actualizado" actualizar el ultimo commit -->
+
+    <!-- Deshacer cambios en los archivos
+        git reset HEAD RutaDelArchivo
+        git checkout -- RutaDelArchivo
+    -->
+
+
+    <!-- Agregar tags => git tag -a v1.0 6e565b4 -m "Mi primera versión con Git" -->
+    <!-- 6e565b4 son las primeras letras del hash del commit al cual le agrego el tag -->
+
+
+    <!-- Crear ramas -->
+    <!-- git branch nombreDeLaRama -->
+
+    <!-- Pasar de una rama a otra: git checkout nombreDeLaRama, hacen una copia del ultimo commit -->
+
+    <!-- git checkout -b nombreDeLaRama es una forma abreviada de crear una rama y entrar en ella -->
+
+    <!-- git merge NombreDeLaRama sirve para funcionar ramas, pero debo estar en la rama padre 
+        de la que quiero funcionar, no necesariamente la master, si tengo master, development y tests
+        entoces si quiero fucionar tests, me debo colocar en development
+    -->
+
+    <!-- git branch -d nombreDeLaRama sirve para eliminar ramas -->
+
+
+    <!-- Para que un repositorio sirva de servidor la carpeta debe terminar en .git y usar git init --bare -->
+
+    <!-- Subir repositorio al servidor => git remote add origin rutaDelDirectorio -->
+
+    <!-- Despues se le envia la información con => git push origin master, tambien sirve para subir los cambios -->
+
+    <!-- git remote -v para ver la ruta -->
+
+    <!-- git clone rutaDelRepositorio para clonar un repositorio de git -->
+
+    <!-- git pull origin master para obtener los ultimos cambios del respositorio del servidor -->
+    <a href="contact.html">Contactanos</a>
+</body>
+</html>
